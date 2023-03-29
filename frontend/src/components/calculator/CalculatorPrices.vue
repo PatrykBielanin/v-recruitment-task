@@ -80,7 +80,7 @@
         </div>
 
         <div class="mb-4">
-            <p class="text-lg font-semibold mb-2">Podaj wartość <span class="font-bold">{{ priceMode == 'brutto' ? 'brutto' : 'netto' }}</span> pojazdu</p>
+            <p class="text-lg font-light mb-2">Podaj wartość <span class="font-bold">{{ priceMode == 'brutto' ? 'brutto' : 'netto' }}</span> pojazdu</p>
             <div class="relative">
                 <input
                     @input="calculateVatPrice(), store.setItem(priceMode, form.price)"
@@ -94,7 +94,7 @@
             </div>
             <AppErrorMessage v-if="store.price.errors.price">Musisz podać wartość swojego pojazdu!</AppErrorMessage>
 
-            <p class="text-lg font-semibold mt-4 text-graywhite/40 mb-2">Wartość <span class="font-bold text-graywhite/40">{{ priceMode != 'brutto' ? 'brutto' : 'netto' }}</span> pojazdu</p>
+            <p class="text-lg font-light mt-4 text-graywhite/40 mb-2">Wartość <span class="font-bold text-graywhite/40">{{ priceMode != 'brutto' ? 'brutto' : 'netto' }}</span> pojazdu</p>
             <div class="relative">
                 <input v-model="calculated" type="text" class="input-text input-disabled" disabled/>
                 <IconDollar class="w-3 absolute top-1/2 right-[10px] transform -translate-y-1/2"></IconDollar>
