@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  @apply text-graywhite;
+}
+
+.btn {
+  @apply bg-primary px-6 py-2 border border-2 border-primary rounded-3xl mr-4 font-semibold transition-all;
+}
+.btn:hover{
+  @apply bg-secondary border-secondary scale-105;
+}
+
+.btn-active, .btn-active:hover {
+  @apply border-2 border-green bg-green/50;
+}
+
+.input-text {
+  @apply bg-transparent py-2 px-4 outline-none w-full border-b border-graywhite;
+}
+
+.input-error {
+  @apply border-red !important;
+}
+
+.input-disabled {
+  @apply bg-transparent text-graywhite/40 border-graywhite/40;
+}
+
+.input-checkbox {
+  @apply outline-none;
+}
+
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}

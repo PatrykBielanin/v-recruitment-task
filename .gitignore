@@ -1,0 +1,7 @@
+frontend/node_modules
+frontend/.vscode
+frontend/package-lock.json
+
+backend/vendor
+backend/CompiledContainer.php
+backend/composer.lock

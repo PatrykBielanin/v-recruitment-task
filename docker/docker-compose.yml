@@ -1,0 +1,39 @@
+version: '2.0'
+
+services:
+  nginx:
+    image: nginx
+    container_name: nginx
+    build:
+      context: ./nginx
+      args:
+        - NGINX_CONFIG_NAME=${NGINX_CONFIG_NAME}
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ${API_DIR}:/var/www/html
+      - ${APP_DIR}:/var/www/html/app
+
+  node:
+    image: node
+    container_name: node
+    build:
+      context: ./node
+    volumes:
+      - ${APP_DIR}:/var/www/html/app
+
+  php:
+    image: php
+    container_name: php
+    build:
+      context: ./php
+      args:
+        - PHP_CONFIG_NAME=${PHP_CONFIG_NAME}
+        - PHP_BASE_CONFIG_NAME=${PHP_BASE_CONFIG_NAME}
+    restart: always
+    environment:
+      TZ: ${TIMEZONE}
+    volumes:
+      - ${API_DIR}:/var/www/html
