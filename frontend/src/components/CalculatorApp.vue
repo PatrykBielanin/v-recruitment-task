@@ -58,7 +58,7 @@
 
 <template>
     <div class="flex flex-col xl:flex-row w-screen justify-evenly px-6 my-12 xl:my-0 xl:mt-0 space-y-16 xl:space-y-0">
-        <div class="flex flex-col space-y-12 w-full xl:w-1/3 px-16 py-16 rounded-3xl bg-item relative shadow-xl">
+        <div class="flex flex-col space-y-12 w-full xl:w-1/3 px-8 py-16 sm:px-16 rounded-3xl bg-item relative shadow-xl">
             <h1 class="font-semibold text-xl" :class="{'mb-8': !isTooExpensive, 'mb-2': isTooExpensive}">Oblicz <span class="font-light">składkę OC/AC swojego pojazdu</span></h1>
             <AppErrorMessage v-if="isTooExpensive">Dla tak drogich samochodów składki nie szacujemy. Skontaktuj się z nami osobiście.</AppErrorMessage>
 
@@ -77,7 +77,7 @@
         </div>
 
         <div class="w-full xl:w-1/2 flex flex-col gap-4">
-            <div class="px-16 py-16 rounded-3xl bg-item w-full h-1/2 shadow-xl flex items-center">
+            <div class="px-16 py-16 rounded-3xl bg-item w-full h-1/2 shadow-xl flex items-center relative z-1">
                 <CalculatorResult :result="0"></CalculatorResult>
             </div>
 

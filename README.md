@@ -33,6 +33,12 @@ cd /docker
 docker-compose up --build -d
 ```
 
+## Pliki entrypoint na Windowsie
+
+Włączając projekt na systemie operacyjnym **Windows** można sie natknąć na błąd z plikami `entrypoint.sh`. Ma to związek z tym jak windows interpertuje linie końcowe plików, także trzeba zmienić ich typ np. za pomocą Visual Studio Code.
+
+![ScreenShot](https://i.imgur.com/WJ3SPip.png)
+
 ## Sprawdzone wersje Dockera
 
 Projekt testowany był na dwóch systemach operacyjnych i różnych wersjach `dockera` oraz `docker-compose`.
