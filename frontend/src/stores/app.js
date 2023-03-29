@@ -62,7 +62,7 @@ export const useAppStore = defineStore('app', {
         'gps': this.gps
       }
 
-      return fetch('http://localhost/api/calculator/price', {
+      return fetch('http://' + window.location.hostname + '/api/calculator/price', {
         method: "POST",
         headers: { 'Content-type': 'application/json' },
         body: JSON.stringify(payload)
@@ -85,7 +85,7 @@ export const useAppStore = defineStore('app', {
       if(this.years == 0){
         this.installment.calculated = this.price.calculated
         this.setActiveResult('installments')
-        
+
         return
       }
 
@@ -98,7 +98,7 @@ export const useAppStore = defineStore('app', {
         'years': this.years
       }
 
-      return fetch('http://localhost/api/calculator/installment', {
+      return fetch('http://' + window.location.hostname + '/api/calculator/installment', {
         method: "POST",
         headers: { 'Content-type': 'application/json' },
         body: JSON.stringify(payload)

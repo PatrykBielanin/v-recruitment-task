@@ -11,6 +11,11 @@ Aby uruchomić projekt należy sklonować go do wybranego folderu, a następnie 
 - Całe repozytorium może budować się nawet do `10 minut` ze względu na pobierane paczki przez composer'a oraz npm'a
 - Nie należy edytować plików `.env` ze względu na mapowanie woluminów w kontenerach
 
+#### Sklonuj repozytorium
+```sh
+git clone git@github.com:PatrykBielanin/v-recruitment-task.git .
+```
+
 #### Przejdź do katalogu
 ```sh
 cd /docker
@@ -35,3 +40,9 @@ Projekt testowany był na dwóch systemach operacyjnych i różnych wersjach `do
 **Ubuntu 20.04.3 LTS**
 - Docker Compose version 1.25.0
 - Docker version 20.10.17, build 100c701
+
+#
+
+**Ubuntu 20.04.6 LTS**
+- Docker Compose version 1.25.0
+- Docker version 23.0.2, build 569dd73
