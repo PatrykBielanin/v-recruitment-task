@@ -28,6 +28,10 @@ export const useAppStore = defineStore('app', {
     }
   }),
 
+  getters: {
+    getYears: (state) => state.years
+  },
+
   actions: {
     setItem(item, value){
       this[item] = value
@@ -72,6 +76,9 @@ export const useAppStore = defineStore('app', {
       .then((response) => {
         this.price.loading = false
         this.price.calculated = response.data.price
+        this.years = 0
+        this.installment.years = 0
+
         this.setActiveResult('price')
 
         return Promise.resolve(response)

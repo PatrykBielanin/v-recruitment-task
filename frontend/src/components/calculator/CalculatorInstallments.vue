@@ -2,7 +2,7 @@
     import IconClose from '../icons/IconClose.vue';
     import IconCheck from '../icons/IconCheck.vue';
     import AppButton from '../partials/AppButton.vue';
-    import {ref} from 'vue'
+    import {ref, watch} from 'vue'
     import { useAppStore } from '../../stores/app';
 
     const store = useAppStore()
@@ -18,6 +18,10 @@
     const form = ref({})
 
     const checked = ref(0);
+
+    watch(() => store.getYears, function() {
+        toggleInstallment(store.years)
+    })
 
     const toggleInstallment = (type) => {
         props.checkboxes.map((item) => {

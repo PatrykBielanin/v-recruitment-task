@@ -33,7 +33,7 @@
         isTooExpensive.value = false
         store.setErrorsDefault('price')
 
-        if(store.netto < 1){
+        if(store.netto <= 0 || store.brutto <= 0){
             store.setItemError('price', 'price', true)
             hasError = true
         }
