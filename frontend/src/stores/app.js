@@ -23,7 +23,8 @@ export const useAppStore = defineStore('app', {
         request: false
       },
       loading: false,
-      calculated: 0
+      calculated: 0,
+      years: 0
     }
   }),
 
@@ -84,6 +85,7 @@ export const useAppStore = defineStore('app', {
     getItemPriceWithInstallments(){
       if(this.years == 0){
         this.installment.calculated = this.price.calculated
+        this.installment.years = 0
         this.setActiveResult('installments')
 
         return
@@ -107,6 +109,7 @@ export const useAppStore = defineStore('app', {
       .then((response) => {
         this.installment.loading = false
         this.installment.calculated = response.data.price
+        this.installment.years = this.years
         this.setActiveResult('installments')
 
         return Promise.resolve(response)
