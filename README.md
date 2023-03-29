@@ -3,6 +3,12 @@
 Repozytorium z kalkulatorem OC/AC stworzone na potrzeby rekrutacji. Frontend został napisany z wykorzystaniem `Vue3`, natomiast backend z wykorzystaniem `PHP 8.1`.
 
 
+## Demo
+W razie gdyby podczas uruchomienia z poradnika poniżej wystąpił jakiś błąd, to zostawiam link do strony gdzie owy projekt jest hostowany.
+
+[calculator.pbielanin.pl](http://calculator.pbielanin.pl)
+
+
 ## Uruchomienie
 
 Aby uruchomić projekt należy sklonować go do wybranego folderu, a następnie z poziomu folderu `/docker` włączyć budowanie obrazów za pomocą komendy poniżej.
